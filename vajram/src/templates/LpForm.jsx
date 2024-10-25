@@ -4,6 +4,7 @@ export default function LpForm() {
   return (
   
      <>
+      <div className='bg-light p-6 w-fit rounded-xl'>
 <form
   action="https://forms.zohopublic.com/ebikego/form/vajramleadform/formperma/ZKCusEvAfG1T5tAaWyXbWDkxHfqm7uBYn6TE5KcjZFc/htmlRecords/submit"
   name="form"
@@ -12,12 +13,13 @@ export default function LpForm() {
   acceptCharset="UTF-8"
   encType="multipart/form-data"
 >
-  <input type="hidden" name="zf_referrer_name" defaultValue="" />
-  <input type="hidden" name="zf_redirect_url" defaultValue="" />
-  <input type="hidden" name="zc_gad" defaultValue="" />
+ 
+  <input className="p-3 text-dark" type="hidden" name="zf_referrer_name" defaultValue="" />
+  <input className="p-3 text-dark" type="hidden" name="zf_redirect_url" defaultValue="" />
+  <input className="p-3 text-dark" type="hidden" name="zc_gad" defaultValue="" />
   <div classname="banner-form">
     <div style={{ marginTop: 20 }}>
-      <input
+      <input className="p-3 text-dark"
         type="text"
         maxLength={255}
         name="Name_First"
@@ -26,7 +28,7 @@ export default function LpForm() {
       />
     </div>
     <div classname="input-1">
-      <input
+      <input className='p-3'
         type="text"
         maxLength={255}
         name="Name_Last"
@@ -35,7 +37,7 @@ export default function LpForm() {
       />
     </div>
     <div style={{ display: "flex" }}>
-      <input
+      <input className="p-3 text-dark"
         type="text"
         compname="PhoneNumber_countrycodeval"
         name="PhoneNumber_countrycodeval"
@@ -46,7 +48,7 @@ export default function LpForm() {
         defaultValue={+91}
         style={{ width: "20%" }}
       />
-      <input
+      <input className="p-3 text-dark"
         type="text"
         compname="PhoneNumber"
         name="PhoneNumber_countrycode"
@@ -60,7 +62,7 @@ export default function LpForm() {
       />
     </div>
     <div>
-      <input
+      <input className="p-3 text-dark"
         type="text"
         maxLength={255}
         name="Email"
@@ -70,7 +72,7 @@ export default function LpForm() {
       />
     </div>
     <div>
-      <select
+      <select className='p-3 bg-light'
         name="Radio"
         style={{
           background: "transparent",
@@ -88,13 +90,14 @@ export default function LpForm() {
       </select>
     </div>
     <div classname="button-text">
-      <button type="submit">
+      <a type="submit" className='btn black-btn'>
         <em>Check Eligibility</em>
-      </button>
+      </a>
     </div>
   </div>
 </form>
 
+</div>
 
 
      </>
