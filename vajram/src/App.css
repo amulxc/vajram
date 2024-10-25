@@ -156,4 +156,44 @@ span {
 
 .tabscale {
   transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-form {
+  border: 1px solid black;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input, select {
+  width: 100%;
+}
+
+button {
+  text-align: center;
+}
+
+.button-text {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-form div {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.banner-form input, .banner-form select {
+  padding: 8px;
+}
+
+em {
+  font-style: normal;
+}
+
+option {
+  color: #000 !important;
 }/*# sourceMappingURL=App.css.map */

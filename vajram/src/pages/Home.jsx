@@ -18,12 +18,12 @@ import improvement from '../assets/icons/improvement.svg'
 
 
 // milestone
-import Milestone from '../templates/milestone.jsx';
 import Headerlp from '../templates/Headerlp.jsx';
 import Footerlp from '../templates/Footerlp.jsx';
 
 import Business_Verticals from '../templates/Business_Verticals';
 import Partnership_slider from '../templates/Partnership_slider';
+import Milestone from '../templates/milestone.jsx';
 
 export default function Home() {
 

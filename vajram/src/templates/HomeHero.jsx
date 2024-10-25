@@ -5,6 +5,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import Modal from 'react-modal';
+import LpForm from '../templates/LpForm.jsx';
+
+
 
 // Modal styles for YouTube video popup
 const modalStyles = {
@@ -152,6 +155,22 @@ const HomeHero = ({ slidesData }) => {
                   </button>
                 </div>
               </div>
+               <div
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(0%, -50%)',
+                  zIndex: '1',
+                  textAlign: 'center',
+                  color: '#fff',
+                  padding: '20px',
+                  width: '100%',
+                  maxWidth: '800px',
+                }}>
+                    <LpForm/>
+                </div>
+
             </div>
           </SwiperSlide>
         ))}
