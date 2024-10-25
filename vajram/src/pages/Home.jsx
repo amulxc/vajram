@@ -2,9 +2,11 @@ import React from 'react';
 import HomeHero from '../templates/HomeHero';
 import whoweare from '../assets/icons/livability-icon.svg'
 import ImageTabsComponent from '../templates/ImageTabsComponent';
+import Business_Verticals from '../templates/Business_Verticals';
+import Partnership_slider from '../templates/Partnership_slider';
 
 export default function Home() {
-    // Example slide data with videos and images
+
     const slidesData = [
       {
         title: 'Welcome to Our Service',
@@ -36,6 +38,8 @@ export default function Home() {
             <p >Crafting the core of e-mobility, Vajram Electric is the silent powerhouse behind the electric revolution. We forge the future with every e-cycle, three-wheeler and two-wheeler that rolls out, charged with innovation and excellence.</p>
         </section>
         <ImageTabsComponent />
+        {/* <Business_Verticals /> */}
+        {/* <Partnership_slider /> */}
       </div>
     );
   }
