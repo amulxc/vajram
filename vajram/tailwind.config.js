@@ -5,6 +5,9 @@ module.exports = {
     './index.html',               // Scan your HTML file too
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontSize: {
         h1: ['2.25rem', { lineHeight: '2.5rem' }],  // Custom font size for h1

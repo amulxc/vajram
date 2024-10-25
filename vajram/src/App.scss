@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+// .manrope-<uniquifier> {
+//   font-family: "Manrope", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
+:root {
+  font-family:"Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
 /* Define your custom color variables */
 $primary-color: #1D4ED8;
 $secondary-color: #9333EA;
-$tertiary-color: #F59E0B;
-$grey-color: #6B7280;
+$tertiary-color: #ffd05c;
+$grey-color: #1D1F22;
 $blue-color: #000000;
 $light-color: #F3F4F6;
 $dark-color: #111827;
@@ -15,36 +38,37 @@ $dark-color: #111827;
 /* Custom Styles for Elements */
 h1 {
   font-size: 2.25rem;
-  line-height: 2.5rem;
+ 
   color: $primary-color;
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 2.25rem;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
   color: $dark-color;
+  letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  color: $tertiary-color;
+  font-size: 26px;
+  font-weight: 500;
+  color: $dark-color;
+  letter-spacing: 1px;
 }
 
 h4 {
   font-size: 1.5rem;
-  line-height: 1.75rem;
+ 
 }
 
 h5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+
 }
 
 h6 {
   font-size: 1rem;
-  line-height: 1.25rem;
+
 }
 
 /* Apply custom background colors */
@@ -67,28 +91,84 @@ h6 {
 .bg-dark {
   background-color: $dark-color;
 }
+.text-light{
+  color: $light-color;
+}
+.text-dark{
+  color: $dark-color;
+}
+.text-yellow{
+  color: $tertiary-color;
+}
 
 p {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 20px;
   color: $grey-color;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
 }
 
 a {
   font-size: 1rem;
-  line-height: 1.5rem;
-  color: $blue-color;
   text-decoration: none;
-
-  &:hover {
-    color: $primary-color;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
+  // &:hover {
+  //   color: $primary-color;
+  // }
+}
+.btn{
+  padding:10px 28px;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: ease-in-out 0.3s;
+}
+.black-btn{
+  color: $light-color;
+  border: 1px solid $dark-color;
+  background-color: $dark-color;
+  &:hover{
+    background-color: $light-color;
+    color: $dark-color;
+    border: 1px solid $dark-color;
   }
+}
+.white-btn{
+  color: $dark-color;
+  border: 1px solid $light-color;
+  background-color: $light-color;
+  &:hover{
+    background-color: $dark-color;
+    color: $light-color;
+    border: 1px solid $light-color;
+  }
+}
+.shadow-light{
+  -webkit-box-shadow:inset  0px 0px 0px 0.3px $light-color;
+-moz-box-shadow:inset  0px 0px 0px 0.3px $light-color;
+box-shadow:inset  0px 0px 0px 0.3px $light-color;
+transition: ease-in-out 0.3s;
+&:hover{
+  box-shadow:inset  0px 0px 0px 1px $light-color;
+}
+}
+.text-stroke-yellow{
+  -webkit-text-stroke-width: 2px;   
+  -webkit-text-stroke-color: $tertiary-color;   
 }
 
 span {
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: normal;
 }
 
 .p-top{padding-top: 100px;}
 .p-bottom{padding-bottom: 100px;}
+
+
+// animation
+.tabscale{
+  transition: color .3s ease,transform .2s ease,-webkit-transform .2s ease
+}

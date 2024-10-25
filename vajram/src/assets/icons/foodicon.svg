@@ -1,0 +1,22 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_42745_60868)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M49.6799 52.7388C45.8315 56.5872 39.592 56.5872 35.7437 52.7388C31.8953 48.8904 31.8953 42.6509 35.7436 38.8025C41.4203 33.1259 49.7836 38.7027 54.894 37.3075C55.7255 42.9893 53.7872 48.7258 49.6799 52.7388V52.7388Z" stroke="#EBC03F" stroke-width="3" stroke-linecap="round"/>
+<path d="M44.0911 44.8494C39.9197 48.5667 34.3617 50.3301 28.8102 49.6974" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.3235 52.7388C14.1719 56.5872 20.4114 56.5872 24.2598 52.7388C28.1082 48.8904 28.1082 42.6509 24.2598 38.8025C18.5832 33.1259 10.2199 38.7027 5.10938 37.3075C4.27793 42.9893 6.21625 48.7258 10.3235 52.7388V52.7388Z" stroke="#EBC03F" stroke-width="3" stroke-linecap="round"/>
+<path d="M15.89 44.9075C20.0894 48.5931 25.6607 50.3142 31.2072 49.6394" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M49.0017 35C49.0017 24.5066 40.4951 16 30.0017 16C19.5083 16 11.0017 24.5066 11.0017 35" stroke="#EBC03F" stroke-width="3" stroke-linecap="round"/>
+<path d="M42.0404 28.7501C40.8633 26.1277 38.6889 24.0501 36 23" stroke="#EBC03F" stroke-width="3" stroke-linecap="round"/>
+<line x1="29.5017" y1="10.5" x2="29.5017" y2="5.5" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="13.0913" y1="17.2972" x2="9.55579" y2="13.7616" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="21.0874" y1="12.3806" x2="19.1664" y2="7.76441" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="8.47289" y1="24.5769" x2="3.85035" y2="22.6711" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="1.5" y1="-1.5" x2="6.5" y2="-1.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 44.8259 17.2972)" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="1.5" y1="-1.5" x2="6.5" y2="-1.5" transform="matrix(0.384206 -0.923247 -0.923247 -0.384206 36.99 13.1892)" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+<line x1="1.5" y1="-1.5" x2="6.5" y2="-1.5" transform="matrix(0.924509 -0.38116 -0.38116 -0.924509 49.6072 23.7619)" stroke="#EBC03F" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_42745_60868">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>
