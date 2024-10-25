@@ -23,7 +23,7 @@ import Footerlp from '../templates/Footerlp.jsx';
 
 import Business_Verticals from '../templates/Business_Verticals';
 import Partnership_slider from '../templates/Partnership_slider';
-import Milestone from '../templates/milestone.jsx';
+import Milestone from '../templates/Milestone.jsx';
 
 export default function Home() {
 
