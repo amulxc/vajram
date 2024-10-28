@@ -50,7 +50,7 @@ const HomeHero = ({ slidesData }) => {
   };
 
   return (
-    <div style={{ position: 'relative', zIndex: '1' }}>
+    <div style={{ position: 'relative', zIndex: '1' }} >
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -98,20 +98,7 @@ const HomeHero = ({ slidesData }) => {
               )}
 
               {/* Content in the middle of the slider */}
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '0',
-                  transform: 'translate(0%, -50%)',
-                  zIndex: '1',
-                  textAlign: 'center',
-                  color: '#fff',
-                  padding: '20px',
-                  width: '100%',
-                  maxWidth: '800px',
-                }}
-              >
+              <div className='herobox1 lg:ps-10 ps-4'>
                 {/* Heading */}
                 <h1 className='text-light text-left md:text-7xl text-5xl'>
                   {slide.title}
@@ -155,19 +142,7 @@ const HomeHero = ({ slidesData }) => {
                   </button>
                 </div>
               </div>
-               <div
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(0%, -50%)',
-                  zIndex: '1',
-                  textAlign: 'center',
-                  color: '#fff',
-                  padding: '20px',
-                  width: '100%',
-                  maxWidth: '800px',
-                }}>
+               <div className='herobox2'>
                     <LpForm/>
                 </div>
 

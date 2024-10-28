@@ -4,7 +4,7 @@ export default function LpForm() {
   return (
   
      <>
-      <div className='bg-light p-6 w-fit rounded-xl'>
+      <div className=' bg-light p-6 w-fit rounded-xl'>
 <form
   action="https://forms.zohopublic.com/ebikego/form/vajramleadform/formperma/ZKCusEvAfG1T5tAaWyXbWDkxHfqm7uBYn6TE5KcjZFc/htmlRecords/submit"
   name="form"
@@ -19,7 +19,7 @@ export default function LpForm() {
   <input className="p-3 text-dark" type="hidden" name="zc_gad" defaultValue="" />
   <div classname="banner-form">
     <div style={{ marginTop: 20 }}>
-      <input className="p-3 text-dark"
+      <input className="p-3 text-dark rounded border border-grey-800	"
         type="text"
         maxLength={255}
         name="Name_First"
@@ -27,8 +27,8 @@ export default function LpForm() {
         placeholder="First Name"
       />
     </div>
-    <div classname="input-1">
-      <input className='p-3'
+    <div  style={{ marginTop: 20 }} classname="input-1 mt-2.5	">
+      <input className='p-3 text-dark rounded border border-grey-800'
         type="text"
         maxLength={255}
         name="Name_Last"
@@ -36,8 +36,8 @@ export default function LpForm() {
         placeholder="Last Name"
       />
     </div>
-    <div style={{ display: "flex" }}>
-      <input className="p-3 text-dark"
+    <div style={{ display: "flex", marginTop: 20 }}>
+      <input className="p-3 text-dark rounded border border-grey-800"
         type="text"
         compname="PhoneNumber_countrycodeval"
         name="PhoneNumber_countrycodeval"
@@ -45,10 +45,10 @@ export default function LpForm() {
         maxLength={10}
         id="international_PhoneNumber_countrycodeval"
         placeholder="Code"
-        defaultValue={+91}
+        defaultValue={'+91'}
         style={{ width: "20%" }}
       />
-      <input className="p-3 text-dark"
+      <input className="p-3 text-dark rounded border border-grey-800"
         type="text"
         compname="PhoneNumber"
         name="PhoneNumber_countrycode"
@@ -61,8 +61,8 @@ export default function LpForm() {
         placeholder="Number"
       />
     </div>
-    <div>
-      <input className="p-3 text-dark"
+    <div  style={{ marginTop: 20 }}>
+      <input className="p-3 text-dark rounded border border-grey-800"
         type="text"
         maxLength={255}
         name="Email"
@@ -71,13 +71,11 @@ export default function LpForm() {
         placeholder="Email Address"
       />
     </div>
-    <div>
-      <select className='p-3 bg-light'
+    <div  style={{ marginTop: 20 }}>
+      <select className='p-3 bg-white text-dark rounded border border-grey-800'
         name="Radio"
         style={{
-          background: "transparent",
-          color: "var(--e-global-color-text)",
-          borderColor: "var(--e-global-color-4a28204)",
+          
           fontWeight: "var(--e-global-typography-text-font-weight)"
         }}
       >
@@ -89,11 +87,14 @@ export default function LpForm() {
         <option value="Greater than 50L">Greater than 50L</option>
       </select>
     </div>
+    <br/>
     <div classname="button-text">
-      <a type="submit" className='btn black-btn'>
+      <button type="submit" className='btn black-btn'>
+       
         <em>Check Eligibility</em>
-      </a>
+      </button>
     </div>
+    <br/>
   </div>
 </form>
 

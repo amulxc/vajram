@@ -196,4 +196,45 @@ em {
 
 option {
   color: #000 !important;
+}
+
+#form select, #form option {
+  color: #111827;
+}
+
+.herobox1, .herobox2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+@media (max-width: 990px) {
+  .herobox1, .herobox2 {
+    top: 28%;
+  }
+}
+
+.herobox2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+@media (max-width: 990px) {
+  .herobox2 {
+    top: 70%;
+    left: 0;
+  }
 }/*# sourceMappingURL=App.css.map */

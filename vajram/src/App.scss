@@ -203,3 +203,39 @@ font-style: normal;
 option {
   color: #000 !important;
 }
+#form{
+  select,option{
+    color: $dark-color;
+  }
+}
+.herobox1,.herobox2{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width:  800px;
+  @media (max-width:990px) {
+    top:28%;
+  }
+}
+.herobox2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  @media (max-width:990px) {
+    top:70%;
+    left: 0;
+  }
+}
