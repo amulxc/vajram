@@ -9,6 +9,15 @@ module.exports = {
       center: true,
     },
     extend: {
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: 0, transform: 'translateY(50px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        fadeUp: 'fadeUp 0.5s ease-out forwards',
+      },
       fontSize: {
         h1: ['2.25rem', { lineHeight: '2.5rem' }],  // Custom font size for h1
         h2: ['2rem', { lineHeight: '2.25rem' }],    // Custom font size for h2

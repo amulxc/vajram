@@ -5,9 +5,11 @@ import React, { useState, useEffect } from 'react';
 import bgvideo from "/src/assets/videos/Business_Verticals.mp4";
 
 const content = [
-  { sno: "01", title: "Manufacturing Powerhouse for Global Brands", text: "We are the trusted manufacturing partner for prestigious brands like Acer Electric and WHILL, producing an array of products including smart wheelchairs and electric scooters." },
-  { sno: "02", title: "Commercial Electric Three and Four-Wheelers for Logistics", text: "Developing innovative electric three-wheelers for last-mile delivery in urban and semi-urban areas, in collaboration with Tiger Electric Auto and Zero21, to meet the booming demand for clean transportation." },
-  { sno: "03", title: "Retrofitting Services", text: "Our retrofitting solutions transform fossil-fuel vehicles into electric ones, supporting fleet operators and commercial entities on their sustainability journey." }
+  { sno: "01", title: "EV Two-Wheelers & e-Bicycles", text: "We are the trusted manufacturing partner for prestigious brands like Acer Electric and WHILL, producing an array of products including smart wheelchairs and electric scooters." },
+  { sno: "02", title: "e-Auto", text: "Developing innovative electric three-wheelers for last-mile delivery in urban and semi-urban areas, in collaboration with Tiger Electric Auto and Zero21, to meet the booming demand for clean transportation." },
+  { sno: "03", title: "e-Trike", text: "The agility of a bike, the comfort of a car—an eco-friendly urban solution." },
+  { sno: "03", title: "e-Tractors", text: "Sustainable power revolutionizing agriculture." },
+  { sno: "03", title: "Smart Electric Wheelchairs", text: "Empowering mobility solutions that transform lives." }
 ];
 
 export default function Business_Verticals() {
@@ -74,13 +76,13 @@ export default function Business_Verticals() {
         }
       `}</style>
 
-      <section className="relative flex h-[600px]" >
+      <section className="relative flex h-[600px]">
         {/* Background video */}
         <video autoPlay muted loop src={bgvideo} type="video/mp4" className="object-cover h-full w-full" />
         
         {/* Overlay content */}
-        <div className="container z-10 mx-auto absolute inset-0">
-          <p className="text-white p-10 ps-5 md:pt-20 text-md uppercase">Business Verticals</p>
+        <div className="z-10 mx-auto absolute inset-0">
+          <p className="text-white p-10 ps-5 md:pt-20 text-md uppercase">EV Portfolio: Tailored for India</p>
           
           <div className="flex md:flex-row flex-col items-center h-full absolute top-20">
             {content.map((item, index) => (
@@ -90,7 +92,7 @@ export default function Business_Verticals() {
               >
                 {/* Section heading and icon */}
                 <div className="flex flex-row md:flex-col w-full relative">
-                  <h1 className="stroke text-7xl hidden lg:block text-white">{item.sno}</h1><br />
+                  {/* <h1 className="stroke text-7xl hidden lg:block text-white">{item.sno}</h1><br /> */}
                   <p className="md:text-md w-4/5 md:w-full font-bold text-white">{item.title}</p>
                   
                   {/* Accordion toggle for mobile view */}

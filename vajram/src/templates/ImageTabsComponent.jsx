@@ -20,7 +20,7 @@ const ImageTabsComponent = ({ tabs, images, heading }) => {
 
   // Desktop version with hover effects
   const renderDesktopView = () => (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <div className="flex items-center justify-center h-screen bg-gray-100" id="Portfolio">
       {/* Left: Image container */}
       <div className="relative w-1/2 h-[100vh]">
         {/* Image with fade and zoom transition */}
@@ -37,7 +37,7 @@ const ImageTabsComponent = ({ tabs, images, heading }) => {
       </div>
 
       {/* Right: Text/tabs container */}
-      <div className="w-1/2 md:ps-32 px-10">
+      <div className="w-1/2 md:ps-32 px-10" >
         <h2 className="text-[20px] text-yellow font-semibold uppercase	 ">{heading}</h2>
 
         {/* Tabs */}

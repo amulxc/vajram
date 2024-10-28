@@ -23,6 +23,8 @@ import Footerlp from '../templates/Footerlp.jsx';
 
 import Business_Verticals from '../templates/Business_Verticals';
 import Partnership_slider from '../templates/Partnership_slider';
+import Services_Verticals from '../templates/Services_Verticals.jsx';
+import Ev_Portfolio from '../templates/Ev_Portfolio.jsx';
 import Milestone from '../templates/Milestone.jsx';
 
 export default function Home() {
@@ -120,13 +122,15 @@ export default function Home() {
           {/* <h2>Hero </h2> */}
           <HomeHero slidesData={slidesData} />
         </section>
-        <section className='container-xl flex flex-col items-center p-top p-bottom  px-4'>
+        <section className='container-xl flex flex-col items-center p-top p-bottom  px-4' id='about'>
           <img src={whoweare} alt="" className='h-[100px]'  />
             <h3 className='text-left md:text-center py-8 uppercase'>Powering the Electric Future of India</h3>
             <p className='text-left md:text-center w-full md:w-10/12'>Crafting the core of e-mobility, Vajram Electric is the silent powerhouse behind the electric revolution. We forge the future with every e-cycle, three-wheeler and two-wheeler that rolls out, charged with innovation and excellence.</p>
         </section>
         <Imagetextpara btnlink='#a' btntxt='Learn More'  image='https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png' heading='Redefining mobility, maximizing value in the EV industry' description='Founded in 2022, Vajram Electric stands at the forefront of India’s EV revolution, specializing in e-cycles, three-wheelers and two-wheelers. Our vision is to lead the world toward greener paths, driven by a team of industry veterans. Join us as we transition towards a public limited company, aiming for an IPO by 2025-2026.'/>
         <Business_Verticals />
+        <Ev_Portfolio />
+        {/* <Services_Verticals/> */}
         {/* milestone box */}
         <section className='bg-light '>
         <div className="container md:container  mx-auto py-10 md:py-20 ">
@@ -161,7 +165,9 @@ export default function Home() {
      
         <Partnership_slider />
        
-       <Footerlp/> 
+      
+
+        <Footerlp/> 
       </div>
     );
   }

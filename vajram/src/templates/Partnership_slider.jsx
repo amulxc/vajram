@@ -1,6 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import whill from "/src/assets/images/whill.webp";
+import tiger from "/src/assets/images/tiger.webp";
+import GP from "/src/assets/images/GP-Logo-Original.webp";
+import acer from "/src/assets/images/Group-1000010967.webp";
+import daewoo from "/src/assets/images/logo7.webp";
+import tadepole from "/src/assets/images/tadepole.webp";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -9,57 +16,88 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // Import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-const swipercontent= [
-  {Image: "https://swiperjs.com/demos/images/nature-1.jpg", title:"Acer Electric", text: "Manufacturing premium electric scooters and bicycles for international markets."},
-  {Image: "https://swiperjs.com/demos/images/nature-2.jpg", title:"WHILL", text: "Producing smart wheelchairs for enhanced healthcare mobility."},
-  {Image: "https://swiperjs.com/demos/images/nature-3.jpg", title:"Daewoo Motors", text: "Manufacturing the eMatiz reverse trike for urban transport."},
-  {Image: "https://swiperjs.com/demos/images/nature-4.jpg", title:"Tiger Electric Auto", text: "Developing commercial three-wheelers for logistics and last-mile delivery."},
-  {Image: "https://swiperjs.com/demos/images/nature-4.jpg", title:"Green Pioneer Mobility", text: "Entering healthcare mobility with assistive devices for seniors and individuals with limited mobility."},
-]
+const swipercontent = [
+  { Image: acer, title: "Acer Electric", text: "Manufacturing premium electric scooters and bicycles for international markets." },
+  { Image: whill, title: "WHILL", text: "Producing smart wheelchairs for enhanced healthcare mobility." },
+  { Image: daewoo, title: "Daewoo Motors", text: "Manufacturing the eMatiz reverse trike for urban transport." },
+  { Image: tiger, title: "Tiger Electric Auto", text: "Developing commercial three-wheelers for logistics and last-mile delivery." },
+  { Image: GP, title: "Green Pioneer Mobility", text: "Entering healthcare mobility with assistive devices for seniors and individuals with limited mobility." },
+  { Image: tadepole, title: "Tadpole", text: "Collaborating on retrofitting services with IIT-Delhi, allowing businesses to convert their fleets to electric." },
+];
 
 export default function Partnership_slider() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
-    <div className="container mx-auto">
-      <Swiper
-          onSwiper={setThumbsSwiper}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          centeredSlides={true}
-          spaceBetween={10}
-          slidesPerView={3}
-          freeMode={false}
-          watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
-        >
-          {swipercontent.map((item,index)=>(
-            <SwiperSlide key={index}>
-              <img src={item.Image}  className='w-[100px]'/>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <Swiper
-          loop={true}
-          spaceBetween={10}
-          thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
-        >
-          {swipercontent.map((item,index)=>(
-            <SwiperSlide key={index}>
-              <p>{item.title}</p>
-              <p>{item.text}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="bg-[#f9f7f2] py-20">
+        <div className="container mx-auto">
+          {/* Thumbnail Swiper */}
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            // centeredSlides={true}
+            spaceBetween={10}
+            slidesPerView={1}
+            freeMode={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+            modules={[Autoplay,FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+          >
+            {swipercontent.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className={`flex justify-center h-[200px] items-center border ${
+                  activeIndex === index ? 'bg-white' : ''
+                }`}
+              >
+                <img
+                  src={item.Image}
+                  className="w-[200px] h-[100px] object-contain p-3"
+                  alt={item.title}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          
+          {/* Main Swiper */}
+          <Swiper
+            loop={true}
+            spaceBetween={10}
+            centeredSlides={true}
+            thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
+          >
+            {swipercontent.map((item, index) => (
+              <SwiperSlide key={index} className="text-center p-5">
+                <p className="font-bold text-lg">{item.title}</p>
+                <p className="text-sm mt-2">{item.text}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </>
   );
