@@ -214,6 +214,15 @@ option {
   width: 100%;
   max-width: 800px;
 }
+.thankyou-page{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
 @media (max-width: 990px) {
   .herobox1, .herobox2 {
     top: 28%;
