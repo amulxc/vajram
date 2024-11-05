@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Headersubpages from '../templates/Headersubpages.jsx';
 
 const Booking = () => {
   useEffect(() => {
@@ -10,6 +11,9 @@ const Booking = () => {
 
   return (
     <div>
+        <section >
+          <Headersubpages/>
+        </section>
       <iframe
         id="myiframe"
         width="100%"
