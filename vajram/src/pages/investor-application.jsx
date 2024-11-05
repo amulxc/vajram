@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Headersubpages from '../templates/Headersubpages.jsx';
 
 export default function InvestorApplication() {
   useEffect(() => {
@@ -10,6 +11,9 @@ export default function InvestorApplication() {
 
   return (
     <div>
+        <section >
+          <Headersubpages/>
+        </section>
       <iframe
         id="myiframe"
         title="Vajram Application Form"
