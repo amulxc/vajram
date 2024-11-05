@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // Import required modules
-import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 
 const swipercontent = [
   { Image: acer, title: "Acer Electric", text: "Manufacturing premium electric scooters and bicycles for international markets." },
@@ -28,7 +28,6 @@ const swipercontent = [
 ];
 
 export default function Partnership_slider() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -37,17 +36,15 @@ export default function Partnership_slider() {
         <div className="container mx-auto">
           {/* Thumbnail Swiper */}
           <Swiper
-            onSwiper={setThumbsSwiper}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             loop={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
-            // centeredSlides={true}
+            centeredSlides={true}
             spaceBetween={10}
             slidesPerView={1}
-            freeMode={true}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -62,15 +59,13 @@ export default function Partnership_slider() {
                 spaceBetween: 50,
               },
             }}
-            modules={[Autoplay,FreeMode, Navigation, Thumbs]}
+            modules={[Autoplay, FreeMode, Navigation]}
             className="mySwiper"
           >
             {swipercontent.map((item, index) => (
               <SwiperSlide
                 key={index}
-                className={`flex justify-center h-[200px] items-center border ${
-                  activeIndex === index ? 'bg-white' : ''
-                }`}
+                className={`flex justify-center h-[200px] items-center border ${activeIndex === index ? 'bg-white' : ''}`}
               >
                 <img
                   src={item.Image}
@@ -80,23 +75,11 @@ export default function Partnership_slider() {
               </SwiperSlide>
             ))}
           </Swiper>
-          
-          {/* Main Swiper */}
-          <Swiper
-            loop={true}
-            spaceBetween={10}
-            centeredSlides={true}
-            thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            {swipercontent.map((item, index) => (
-              <SwiperSlide key={index} className="text-center p-5">
-                <p className="font-bold text-lg">{item.title}</p>
-                <p className="text-sm mt-2">{item.text}</p>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {/* Active Slide Content */}
+          <div className="text-center mt-8">
+            <p className="font-bold text-lg">{swipercontent[activeIndex].title}</p>
+            <p className="text-sm mt-2">{swipercontent[activeIndex].text}</p>
+          </div>
         </div>
       </div>
     </>

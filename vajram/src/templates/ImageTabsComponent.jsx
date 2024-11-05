@@ -45,13 +45,13 @@ const ImageTabsComponent = ({ tabs, images, heading }) => {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className="cursor-pointer transition-all duration-200 ease-in-out "
+              className="cursor-pointer transition-all duration-200 ease-in-out  hover:scale-105 text-left origin-left	tabscale text-black opacity-60 hover:opacity-100 transition-all"
               onMouseEnter={() => setCurrentImage(index)} // Change image on hover
             >
-              <h3 className="text-[20px] hover:scale-105 text-left origin-left	tabscale text-black opacity-60 hover:opacity-100 transition-all  mt-7 ">
+              <h3 className="text-[20px]  mt-7 ">
                 {tab.title}
               </h3>
-              <p className="text-[18px] text-gray hidden">{tab.description}</p>
+              <p className="text-[14px] text-gray pt-1 ">{tab.description}</p>
             </div>
           ))}
         </div>
@@ -75,7 +75,7 @@ const ImageTabsComponent = ({ tabs, images, heading }) => {
             <div className="mt-6 text-center">
             <h2 className="text-xl font-normal text-yellow-700 py-8">{heading}</h2>
               <h3 className="text-lg font-normal text-gray-900 pb-8">{tab.title}</h3>
-              <p className="text-gray-500 hidden">{tab.description}</p>
+              <p className="text-gray-500 pb-12">{tab.description}</p>
             </div>
           </div>
         </SwiperSlide>

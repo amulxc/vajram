@@ -10,7 +10,7 @@ const Imagetextpara = ({ image, heading, description,btntxt,btnlink }) => {
       <div className="basis-full md:basis-6/12 ps-5 md:ps-20">
       <h2 className='py-4 text-light'>{heading}</h2>
       <p className='pb-10 text-light'> {description}</p>
-      {/* <a href={btnlink}className='btn white-btn'>{btntxt}</a> */}
+      <a href={btnlink}className='btn white-btn'>{btntxt}</a>
       </div>
     </div>
     </section>

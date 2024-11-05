@@ -103,7 +103,7 @@ const HomeHero = ({ slidesData }) => {
                 <h1 className='text-light text-left md:text-7xl text-5xl'>
                   {slide.title}
                 </h1>
-
+                <h3 className='text-light text-left mt-5'>{slide.discription}</h3>
 
                 {/* Buttons */}
                 <div className='text-left' style={{ marginTop: '2rem' }}>
@@ -128,17 +128,17 @@ const HomeHero = ({ slidesData }) => {
 
                   <button
                     onClick={() => openModal(slide.videoPopupUrl)}
-                    className="popup-btn bg-light rounded-full p-5
-"
+                    // button hided by classname 
+                    className="popup-btn bg-light rounded-full p-5 hidden"
                     style={{
                     
                       cursor: 'pointer',
                     }}
                   >
                     <svg class="noFlip  h-8 " xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24">
-  <path fill-rule="evenodd" d="M7.7 19a.7.7 0 01-.3-.1.8.8 0 01-.4-.7V5.8a.8.8 0 01.4-.7.7.7 0 01.7 0l10.2 6.2a.8.8 0 01.4.7.8.8 0 01-.4.7L8.1 18.9a.7.7 0 01-.4.1z"></path>
-  <path d="M7.7 19.8a1.5 1.5 0 01-.7-.3 1.5 1.5 0 01-.7-1.3V5.8A1.6 1.6 0 017 4.5a1.5 1.5 0 011.5 0l10.2 6.2a1.5 1.5 0 01.7 1.3 1.6 1.6 0 01-.7 1.3L8.5 19.5a1.5 1.5 0 01-.8.3zm0-1.5zm0-12.6v12.5L18 12z"></path>
-</svg>
+                      <path fill-rule="evenodd" d="M7.7 19a.7.7 0 01-.3-.1.8.8 0 01-.4-.7V5.8a.8.8 0 01.4-.7.7.7 0 01.7 0l10.2 6.2a.8.8 0 01.4.7.8.8 0 01-.4.7L8.1 18.9a.7.7 0 01-.4.1z"></path>
+                      <path d="M7.7 19.8a1.5 1.5 0 01-.7-.3 1.5 1.5 0 01-.7-1.3V5.8A1.6 1.6 0 017 4.5a1.5 1.5 0 011.5 0l10.2 6.2a1.5 1.5 0 01.7 1.3 1.6 1.6 0 01-.7 1.3L8.5 19.5a1.5 1.5 0 01-.8.3zm0-1.5zm0-12.6v12.5L18 12z"></path>
+                    </svg>
                   </button>
                 </div>
               </div>

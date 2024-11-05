@@ -1,7 +1,10 @@
 import React from 'react';
 import HomeHero from '../templates/HomeHero';
-import whoweare from '../assets/icons/livability-icon.svg'
+import whoweare from '../assets/images/vaj.webp'
 import ImageTabsComponent from '../templates/ImageTabsComponent';
+import LpForm from '../templates/LpForm.jsx';
+import ebike from '../assets/images/ebike.png';
+import formbackground from '../assets/images/formback.png';
 
 
 import Imagetextpara from '../templates/Imagetextpara.jsx';
@@ -27,13 +30,20 @@ import Services_Verticals from '../templates/Services_Verticals.jsx';
 import Ev_Portfolio from '../templates/Ev_Portfolio.jsx';
 import Milestone from '../templates/Milestone.jsx';
 
+// tabs images
+import Domestic from '../assets/images/Domestic.png'
+import International from '../assets/images/International.png'
+import Technology from '../assets/images/Technology.png'
+import Product from '../assets/images/Product.png'
+
 export default function Home() {
 
     const slidesData = [
       {
         title: 'Invest in Vajram',
-        image: 'https://theebg.com/images/wearededicated-d.webp',
-        videoUrl: 'https://theebg.com/video/ebg.mp4', // Background video URL
+        discription: 'Invest in Tomorrow’s Future Today',
+        image: International,
+        // videoUrl: 'https://theebg.com/video/ebg.mp4', // Background video URL
         videoPopupUrl: 'https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;&amp;autoplay=1&amp;mute=0', // Popup video URL
         // link: 'https://example.com',
         buttonText: 'Learn More',
@@ -45,22 +55,28 @@ export default function Home() {
         title: 'Domestic Expansion',
         description:'Establishing 2,000 dealerships and service centers in Tier-2 and Tier-3 cities over the next three years for robust after-sales support.'},
       {
-        title: 'International Market Entry'},
+        title: 'International Market Entry',
+        description:"Expanding into Southeast Asia, Africa, and Latin America in Year 2, leveraging partnerships with Daewoo Motors and Green Pioneer Mobility."
+      },
       {
-        title: 'Product Line Expansion'},
+        title: 'Product Line Expansion',
+        description:"Developing commercial electric three-wheelers for logistics in collaboration with Zero21 and Tiger Electric Auto."
+      },
       {
         title: 'Technology as a Service (TaaS)',
+        description:"Launching a TaaS platform for fleet management and predictive maintenance, creating a recurring revenue stream."
       },
-      // Add more tabs as needed
     ];
   
     const Images = [
-      'https://www.vajramelectric.com/wp-content/uploads/2024/02/WhatsApp-Image-2017-04-20-at-22.16.jpg', // Replace with actual image paths
-      'https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png',
-      'https://www.vajramelectric.com/wp-content/uploads/2024/02/WhatsApp-Image-2017-04-20-at-22.16.jpg', // Replace with actual image paths
-      'https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png',
-
-
+        Domestic,
+        International,
+        Product,
+        Technology,
+      // 'https://www.vajramelectric.com/wp-content/uploads/2024/02/WhatsApp-Image-2017-04-20-at-22.16.jpg', // Replace with actual image paths
+      // 'https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png',
+      // 'https://www.vajramelectric.com/wp-content/uploads/2024/02/WhatsApp-Image-2017-04-20-at-22.16.jpg', // Replace with actual image paths
+      // 'https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png',
     ];
 
     // icon box content
@@ -125,9 +141,9 @@ export default function Home() {
         <section className='container-xl flex flex-col items-center p-top p-bottom  px-4' id='about'>
           <img src={whoweare} alt="" className='h-[100px]'  />
             <h3 className='text-left md:text-center py-8 uppercase'>Powering the Electric Future of India</h3>
-            <p className='text-left md:text-center w-full md:w-10/12'>Crafting the core of e-mobility, Vajram Electric is the silent powerhouse behind the electric revolution. We forge the future with every e-cycle, three-wheeler and two-wheeler that rolls out, charged with innovation and excellence.</p>
+            <p className='text-left md:text-center w-full md:w-[70%]'>Crafting the core of e-mobility, Vajram Electric is the silent powerhouse behind the electric revolution. We forge the future with every e-cycle, three-wheeler and two-wheeler that rolls out, charged with innovation and excellence.</p>
         </section>
-        <Imagetextpara btnlink='#a' btntxt='Learn More'  image='https://www.vajramelectric.com/wp-content/uploads/2024/02/super-soco-cpx-02-1.png' heading='Redefining mobility, maximizing value in the EV industry' description='Founded in 2022, Vajram Electric stands at the forefront of India’s EV revolution, specializing in e-cycles, three-wheelers and two-wheelers. Our vision is to lead the world toward greener paths, driven by a team of industry veterans. Join us as we transition towards a public limited company, aiming for an IPO by 2025-2026.'/>
+        <Imagetextpara btnlink='#a' btntxt='Learn More'  image={ebike} heading='Redefining mobility, maximizing value in the EV industry' description='Founded in 2022, Vajram Electric stands at the forefront of India’s EV revolution, specializing in e-cycles, three-wheelers and two-wheelers. Our vision is to lead the world toward greener paths, driven by a team of industry veterans. Join us as we transition towards a public limited company, aiming for an IPO by 2025-2026.'/>
         <Business_Verticals />
         <Ev_Portfolio />
         {/* <Services_Verticals/> */}
@@ -164,8 +180,19 @@ export default function Home() {
         <ImageTabsComponent tabs={Tabs}  images={Images}  heading="Growth Strategy"/>
      
         <Partnership_slider />
-       
-      
+        <div 
+        style={{
+          backgroundImage: `url(${formbackground})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="container py-20 flex justify-center text-center">
+          <LpForm/>
+        </div>
+      </div>
+
 
         <Footerlp/> 
       </div>

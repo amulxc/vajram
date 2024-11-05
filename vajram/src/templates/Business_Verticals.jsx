@@ -15,9 +15,21 @@ export default function Business_Verticals() {
 
   useEffect(() => {
     // Set the first accordion item open by default for mobile view only
-    if (window.innerWidth <= 768) {
-      setActiveIndex(0); // First item is open by default in mobile view
-    }
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setActiveIndex(0); // First item is open by default in mobile view
+      } else {
+        setActiveIndex(null); // Collapse all when the screen is not mobile
+      }
+    };
+
+    // Add event listener to handle resize
+    window.addEventListener("resize", handleResize);
+    // Trigger the handler on initial load
+    handleResize();
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleAccordion = (index) => {
@@ -72,9 +84,9 @@ export default function Business_Verticals() {
             transition: opacity 0.5s ease-in;
           }
         }
-      `}</style>
+      `}</style>  
 
-      <section className="relative flex h-[600px]" >
+      <section className="relative flex h-[700px]" >
         {/* Background video */}
         <video autoPlay muted loop src={bgvideo} type="video/mp4" className="object-cover h-full w-full" />
         
